@@ -1,0 +1,226 @@
+\documentclass[10pt,a4paper,UTF8]{ctexart}
+
+\linespread{1.5}
+\usepackage{geometry}%用于设置上下左右页边距
+	\geometry{left=2.5cm,right=2.5cm,top=3.2cm,bottom=2.7cm}
+\usepackage{xeCJK,amsmath,paralist,enumerate,booktabs,multirow,graphicx,subfig,setspace,listings,lastpage,hyperref}
+\usepackage{amsthm, amssymb, bm, color, framed, graphicx, hyperref, mathrsfs}
+\usepackage{mathrsfs}  
+	\setlength{\parindent}{2em}
+	\lstset{language=Matlab}%
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{subfloat}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{paralist}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{threeparttable}
+\usepackage{tcolorbox}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{pifont}
+\usepackage{lipsum}
+\usepackage{microtype}
+\usepackage{wrapfig}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{makecell}
+\usepackage{amsmath}
+\usepackage{pifont}
+\usepackage{lipsum}
+\usepackage{microtype}
+\usepackage{wrapfig}
+\usepackage{indentfirst}
+\usepackage{diagbox}
+\usepackage{etoolbox}
+
+%\setmainfont{Times New Roman}[SmallCapsFont=TeX Gyre Termes:+smcp]
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black
+}
+
+\setenumerate{partopsep=0pt,topsep=0pt,itemsep=-2pt,leftmargin=2em}
+\setitemize{itemsep=-2pt,partopsep=0pt,topsep=0pt,leftmargin=2em}
+
+\titlespacing*{\section}{0pt}{3pt}{3pt}
+\titlespacing*{\subsection}{0pt}{2pt}{2pt}
+\titlespacing*{\subsubsection}{0pt}{1pt}{1pt}
+\titlespacing*{\paragraph}{0pt}{0pt}{0pt}
+
+\ctexset{secnumdepth=4,tocdepth=4}
+\setlength{\parindent}{0pt}
+\setstretch{1.35}
+
+
+\setCJKmainfont[BoldFont={FZHei-B01},ItalicFont={FZKai-Z03}]{FZShuSong-Z01} 
+\setCJKsansfont[BoldFont={FZHei-B01}]{FZKai-Z03} 
+\setCJKmonofont[BoldFont={FZHei-B01}]{FZFangSong-Z02}
+\setCJKfamilyfont{zhsong}{FZShuSong-Z01} 
+\setCJKfamilyfont{zhhei}{FZHei-B01} 
+\setCJKfamilyfont{zhkai}[BoldFont={FZHei-B01}]{FZKai-Z03} 
+\setCJKfamilyfont{zhfs}[BoldFont={FZHei-B01}]{FZFangSong-Z02} 
+\renewcommand*{\songti}{\CJKfamily{zhsong}} 
+\renewcommand*{\heiti}{\CJKfamily{zhhei}} 
+\renewcommand*{\kaishu}{\CJKfamily{zhkai}} 
+\renewcommand*{\fangsong}{\CJKfamily{zhfs}}
+
+
+\definecolor{mKeyword}{RGB}{0,0,255}          % bule
+\definecolor{mString}{RGB}{160,32,240}        % purple
+\definecolor{mComment}{RGB}{34,139,34}        % green
+\definecolor{mNumber}{RGB}{128,128,128} 
+
+\lstdefinestyle {njulisting} {
+	basewidth = 0.5 em,
+	lineskip = 3 pt,
+	basicstyle = \small\ttfamily,
+	% keywordstyle = \bfseries,
+	commentstyle = \itshape\color{gray}, 
+	basicstyle=\small\ttfamily,
+	keywordstyle={\color{mKeyword}},     % sets color for keywords
+	stringstyle={\color{mString}},       % sets color for strings
+	commentstyle={\color{mComment}},     % sets color for comments
+	numberstyle=\tiny\color{mNumber},
+	numbers = left,
+	captionpos = t,
+	breaklines = true,
+	xleftmargin = 1 em,
+	xrightmargin = 0 em,
+	frame=tlrb,
+	tabsize=4
+}
+
+\lstset{
+style = njulisting, % 调用上述样式 
+flexiblecolumns % 允许调整字符宽度
+}
+
+
+%================= 基本格式预置 ===========================
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{人机交互与用户设计体验}
+\rhead{MOOC习题答案}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\theenumi}{(\arabic{enumi})}
+\CTEXsetup[format={\bfseries\zihao{-3}}]{section}
+\CTEXsetup[format={\bfseries\zihao{4}}]{subsection}
+\CTEXsetup[format={\bfseries\zihao{-4}}]{subsubsection}
+
+
+\renewcommand{\contentsname}{目录}  
+
+%\definecolor{shadecolor}{RGB}{241, 241, 255}
+\newcounter{problemname}
+\newenvironment{problem}{\stepcounter{problemname}\par\noindent\textbf{\arabic{problemname}.\,}}{}
+\newenvironment{solution}{\kaishu 解析：}{\vspace{0.2em}}
+
+\newcommand{\myline}{\uline{\ \ \ \ \ \ \ \ \ \ }}
+
+\begin{document}
+	\begin{center}
+		\LARGE\textbf{人机交互与用户设计体验MOOC习题答案}
+	\end{center}
+
+	\setlength{\parskip}{0.25em}
+
+	\input{1初识人机交互和用户体验.tex}
+	\input{2交互设计的原则与目标.tex}
+	\input{3如何定义交互系统的需求和用户.tex}
+	\input{4如何开展交互设计.tex}
+	\input{5如何对交互性能进行评价.tex}
+	\input{6交互设计模型与理论.tex}
+
+\end{document}
+
+% \begin{compactenum}
+%     \item 
+% \end{compactenum}
+
+
+% \begin{figure}[H]
+%     \vspace{-0.5em}
+% 	\centering
+% 	\includegraphics[width=0.4\textwidth]{images/}
+% 	\caption{}
+%     \label{}
+%     \vspace{-1em}
+% \end{figure}
+
+
+% \vspace{-0.8em}
+% \begin{multicols}{2}
+%     \begin{itemize}
+%         \item 
+%     \end{itemize}
+% \end{multicols}
+% \vspace{-1em}
+
+
+% \vspace{-0.5em}
+% \begin{spacing}{1.2}
+%     \centering
+%     \begin{longtable}{|W{c}{2.5cm}|W{c}{3.8cm}|W{c}{4.2cm}|m{4cm}<{\centering}|}
+% 		表格内容
+% 		表头居中方式  \multicolumn{1}{c|}{表头内容} 
+%     \end{longtable}
+% 	\end{spacing}
+% \vspace{-1em}
+
+
+% \begin{figure}[htbp]
+% 	\setcounter{subfigure}{0}
+% 	\centering
+% 	\vspace{-0.5em}	
+% 	\subfloat[]{
+% 	\begin{minipage}[t]{0.33\linewidth}
+% 	\centering
+% 	\includegraphics[width=0.97\linewidth]{}
+% 	\caption{}
+%     \label{}
+% 	\end{minipage}
+% 	}
+% 	\subfloat[]{
+% 	\begin{minipage}[t]{0.33\linewidth}
+% 	\centering
+% 	\includegraphics[width=0.97\linewidth]{}
+% 	\caption{}
+%     \label{}
+% 	\end{minipage}
+% 	}
+% 	\centering
+% 	\vspace{-1em}
+% 	\caption{}
+% \end{figure}
+
+
+% \begin{wraptable}{r}{6.5cm}
+%     \centering
+%     \vspace{-1.5em}
+%     \begin{tabular}{|c|c|}
+%     \hline
+%     期望的确定性 & 确定性因子 \\ \hline
+%     95\% & 1.960  \\ \hline
+%     90\% & 1.645  \\ \hline
+%     85\% & 1.281  \\ \hline
+%     \end{tabular}
+%     \caption*{常见的确定性因子}
+%     \vspace{-1.5em}
+% \end{wraptable}
+
+
+% \vspace{-0.5em}
+% \begin{shaded}
+
+% \end{shaded}
+% \vspace{-1em}
